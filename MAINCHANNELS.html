@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The NABESOF</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #162447); /* Dark gradient background */
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+
+        header {
+            margin-top: 50px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 600;
+            color: #00c9ff; /* Futuristic cyan */
+            text-shadow: 0 0 4px #00c9ff, 0 0 8px #00c9ff, 0 0 13px #00c9ff;
+            letter-spacing: 4px;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        h1:hover {
+            color: #ff00e6; /* Neon pink on hover */
+            text-shadow: 0 0 4px #ff00e6, 0 0 8px #ff00e6, 0 0 13px #ff00e6;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #ff00e6; /* Neon pink */
+            margin-top: 20px;
+        }
+
+        blockquote {
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #aaa;
+            margin-top: 20px;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        main {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 40px; /* Moderate gap between buttons */
+            margin-top: 40px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background: linear-gradient(45deg, #ff00e6, #00c9ff); /* Neon gradient button */
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 5px #ff00e6, 0 0 10px #00c9ff, 0 0 15px #ff00e6;
+            text-decoration: none; /* Ensures no underline on the button */
+        }
+
+        .btn:hover {
+            background: linear-gradient(45deg, #00c9ff, #ff00e6); /* Reversed gradient on hover */
+            transform: translateY(-4px);
+            box-shadow: 0 0 10px #ff00e6, 0 0 20px #00c9ff;
+        }
+
+        footer {
+            padding: 20px;
+            background: #111; /* Dark background for footer */
+            width: 100%;
+            text-align: center;
+            color: #aaa;
+        }
+
+        footer p {
+            font-size: 1rem;
+            color: #00c9ff; /* Futuristic cyan footer text */
+        }
+
+        footer a {
+            color: #00c9ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 3rem; /* Slightly smaller heading on medium screens */
+            }
+
+            h2 {
+                font-size: 2rem; /* Adjusted subtitle for medium screens */
+            }
+
+            blockquote {
+                font-size: 1.2rem; /* Slightly smaller quote font */
+            }
+
+            .button-container {
+                gap: 30px; /* Slightly reduced gap for medium screens */
+            }
+
+            .btn {
+                font-size: 1.1rem; /* Adjusted font size for buttons on medium screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem; /* Smaller heading on small screens */
+            }
+
+            h2 {
+                font-size: 1.8rem; /* Adjusted subtitle font size */
+            }
+
+            blockquote {
+                font-size: 1rem; /* Smaller quote text */
+                margin-top: 15px; /* Less space above the quote */
+                max-width: 90%; /* Ensure the quote takes up more width */
+            }
+
+            .button-container {
+                flex-direction: column; /* Stack buttons vertically on small screens */
+                gap: 20px; /* Reduced gap between buttons */
+            }
+
+            .btn {
+                width: 100%; /* Make buttons full width on small screens */
+                padding: 12px 0; /* Adjust padding for better appearance */
+                font-size: 1.1rem; /* Slightly reduced font size */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem; /* Further reduced heading size for very small screens */
+            }
+
+            h2 {
+                font-size: 1.5rem; /* Smaller subtitle for very small screens */
+            }
+
+            blockquote {
+                font-size: 0.9rem; /* Even smaller quote text */
+                margin-top: 10px; /* Less space above the quote */
+            }
+
+            .btn {
+                font-size: 1rem; /* Adjusted font size for very small screens */
+                padding: 10px 0; /* Less padding for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>THE NABESOF</h1>
+        <blockquote>"If Youre Heart Is Clear Than Welcome Dear"</blockquote>
+        <h2>Main Channels</h2>
+    </header>
+    <main>
+        <div class="button-container">
+            <!-- Button 1: Link to an external website -->
+            <a href="https://whatsapp.com/channel/0029VaOeUJVGzzKXTepU1q17" target="_blank">
+                <button class="btn">WHATSAPP</button>
+            </a>
+            <!-- Button 2: Link to another external website -->
+            <a href="https://t.me/nabesofhacks" target="_blank">
+                <button class="btn">TELEGRAM</button>
+            </a>
+            <!-- Button 3: Link to another external website -->
+            <a href="www.youtube.com/@NRN300" target="_blank">
+                <button class="btn">YOUTUBE</button>
+            </a>
+        </div>
+    </main>
+    <footer>
+        <p>Created By <a href="https://primeunlocked.blogspot.com/" target="_blank">Hussain Baloch</a></p>
+    </footer>
+</body>
+</html>
