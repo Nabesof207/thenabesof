@@ -1,168 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>The NABESOF</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NABESOF - Under Maintenance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #1a1a2e, #162447); /* Dark gradient background */
-            color: #fff;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center;
-        }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #2a3d66, #212d45);
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
-        header {
-            margin-top: 50px;
-        }
+    .container {
+      text-align: center;
+      padding: 20px;
+      border-radius: 15px;
+      background-color: rgba(0, 0, 0, 0.6);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      width: 80%;
+      max-width: 600px;
+    }
 
-        h1 {
-            font-size: 4rem;
-            font-weight: 600;
-            color: #00c9ff; /* Futuristic cyan */
-            text-shadow: 0 0 4px #00c9ff, 0 0 8px #00c9ff, 0 0 13px #00c9ff;
-            letter-spacing: 4px;
-            transition: color 0.3s ease, text-shadow 0.3s ease;
-        }
+    .title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 48px;
+      color: #00f0ff;
+      margin-bottom: 10px;
+      animation: glow 1.5s infinite alternate;
+    }
 
-        h1:hover {
-            color: #ff00e6; /* Neon pink on hover */
-            text-shadow: 0 0 4px #ff00e6, 0 0 8px #ff00e6, 0 0 13px #ff00e6;
-        }
+    .message {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
 
-        main {
-            flex-grow: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
+    .loader {
+      border: 6px solid rgba(255, 255, 255, 0.3);
+      border-top: 6px solid #00f0ff;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      margin: 20px auto;
+      animation: spin 1.5s linear infinite;
+    }
 
-        .button-container {
-            display: flex;
-            gap: 100px; /* Larger gap between buttons */
-        }
+    .countdown .time {
+      font-size: 24px;
+      font-weight: 500;
+      color: #00f0ff;
+    }
 
-        .btn {
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            background: linear-gradient(45deg, #ff00e6, #00c9ff); /* Neon gradient button */
-            color: white;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 5px #ff00e6, 0 0 10px #00c9ff, 0 0 15px #ff00e6;
-            text-decoration: none; /* Ensures no underline on the button */
-        }
+    .note {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #ccc;
+    }
 
-        .btn:hover {
-            background: linear-gradient(45deg, #00c9ff, #ff00e6); /* Reversed gradient on hover */
-            transform: translateY(-4px);
-            box-shadow: 0 0 10px #ff00e6, 0 0 20px #00c9ff;
-        }
+    .whatsapp {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      color: #00f0ff;
+      font-size: 18px;
+    }
 
-        footer {
-            padding: 20px;
-            background: #111; /* Dark background for footer */
-            width: 100%;
-            text-align: center;
-            color: #aaa;
-        }
+    .whatsapp img {
+      width: 24px;
+      height: 24px;
+    }
 
-        footer p {
-            font-size: 1rem;
-            color: #00c9ff; /* Futuristic cyan footer text */
-        }
+    /* Animations */
+    @keyframes glow {
+      0% {
+        text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 30px #00f0ff;
+      }
+      100% {
+        text-shadow: 0 0 20px #00f0ff, 0 0 30px #00f0ff, 0 0 40px #00f0ff;
+      }
+    }
 
-        footer a {
-            color: #00c9ff;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
 
-        footer a:hover {
-            text-decoration: underline;
-        }
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .title {
+        font-size: 36px;
+      }
 
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            h1 {
-                font-size: 3rem; /* Slightly smaller heading on medium screens */
-            }
+      .message {
+        font-size: 16px;
+      }
 
-            .button-container {
-                gap: 40px; /* Slightly reduced gap between buttons */
-            }
+      .loader {
+        width: 40px;
+        height: 40px;
+      }
 
-            .btn {
-                font-size: 1.1rem; /* Slightly smaller font size for buttons */
-            }
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem; /* Reduced heading size on smaller screens */
-            }
-
-            .button-container {
-                flex-direction: column; /* Stack buttons vertically on small screens */
-                gap: 20px; /* Reduced gap between buttons */
-            }
-
-            .btn {
-                width: 100%; /* Make buttons full width */
-                padding: 12px 0; /* Adjust padding for better appearance */
-                font-size: 1.1rem; /* Slightly reduced font size */
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2rem; /* Further reduced heading size for very small screens */
-            }
-
-            .btn {
-                font-size: 1rem; /* Adjusted font size for very small screens */
-                padding: 10px 0; /* Less padding for smaller screens */
-            }
-        }
-    </style>
+      .countdown .time {
+        font-size: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>THE NABESOF</h1>
-    </header>
-    <main>
-        <div class="button-container">
-            <!-- Button 1: Link to an external website -->
-            <a href=https://nabesof207.github.io/-/ target="_blank">
-                <button class="btn">MAIN CHANNELS</button>
-            </a>
-            <!-- Button 2: Link to another external website -->
-            <a href=https://nabesof207.github.io/nabesofall/ target="_blank">
-                <button class="btn">ALL CHANNELS</button>
-            </a>
-        </div>
-    </main>
-    <script async="async" data-cfasync="false" src="//pl25161137.profitablecpmrate.com/c7e98f4175fd0a4e9fb94aeac64dc664/invoke.js"></script>
-<div id="container-c7e98f4175fd0a4e9fb94aeac64dc664"></div>
-    <footer>
-        <p>Created By <a href="https://primeunlocked.blogspot.com/" target="_blank">Hussain Baloch</a></p>
-    </footer>
-    <script type='text/javascript' src='//pl25107975.profitablecpmrate.com/0b/80/26/0b8026b4a24329a2c0cd0e02a609e0eb.js'></script>
-    <script type='text/javascript' src='//pl25107975.profitablecpmrate.com/0b/80/26/0b8026b4a24329a2c0cd0e02a609e0eb.js'></script>
+
+  <div class="container">
+    <h1 class="title">NABESOF</h1>
+    <p class="message">Our website is currently undergoing improvements. Please check back later.</p>
+    <div class="loader"></div>
+    <p class="note">Thank you for your patience!</p>
+    <div class="countdown">
+      <span class="time" id="countdown"></span>
+    </div>
+  </div>
+
+  <div class="whatsapp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+    <span>+123 456 7890</span>
+  </div>
+
+  <script>
+    // Countdown Timer
+    let countdownElement = document.getElementById("countdown");
+
+    function updateCountdown() {
+      let endDate = new Date("2025-01-15T00:00:00"); // Set your desired date here
+      let currentDate = new Date();
+      let timeRemaining = endDate - currentDate;
+
+      if (timeRemaining > 0) {
+        let days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+        countdownElement.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      } else {
+        countdownElement.textContent = "The site is live!";
+      }
+    }
+
+    setInterval(updateCountdown, 500);
+  </script>
+
 </body>
 </html>
