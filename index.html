@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>NABESOF - Under Maintenance</title>
+  <title>NABESOF - Futuristic Website</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  
   <style>
     /* Global Styles */
     * {
@@ -16,117 +16,101 @@
 
     body {
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #2a3d66, #212d45);
-      color: #fff;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .container {
+      background: linear-gradient(135deg, #1b2838, #283e56);
+      color: white;
       text-align: center;
-      padding: 20px;
-      border-radius: 15px;
-      background-color: rgba(0, 0, 0, 0.6);
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-      width: 80%;
-      max-width: 600px;
+      overflow-x: hidden;
     }
 
-    .title {
+    h1 {
       font-family: 'Orbitron', sans-serif;
-      font-size: 48px;
-      color: #00f0ff;
-      margin-bottom: 10px;
+      font-size: 50px;
+      color: #00ffcc;
+      margin-top: 20px;
       animation: glow 1.5s infinite alternate;
     }
 
-    .message {
-      font-size: 18px;
-      margin-bottom: 40px;
-    }
-
-    .loader {
-      border: 6px solid rgba(255, 255, 255, 0.3);
-      border-top: 6px solid #00f0ff;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
+    /* Ad Banner */
+    .ad-banner {
       margin: 20px auto;
-      animation: spin 1.5s linear infinite;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      text-align: center;
+      width: 90%;
+      max-width: 800px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
     }
 
-    .countdown .time {
-      font-size: 24px;
-      font-weight: 500;
-      color: #00f0ff;
-    }
-
-    .note {
-      margin-top: 20px;
-      font-size: 14px;
-      color: #ccc;
-    }
-
-    .whatsapp {
+    /* Buttons Section */
+    .button-container {
       margin-top: 30px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      color: #00f0ff;
-      font-size: 18px;
     }
 
-    .whatsapp img {
-      width: 24px;
-      height: 24px;
+    .button {
+      display: inline-block;
+      margin: 15px;
+      padding: 15px 30px;
+      background-color: #00ffcc;
+      color: black;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .button:hover {
+      background-color: #007f66;
+      transform: scale(1.1);
+    }
+
+    /* Promotional Banner */
+    .promo-banner {
+      margin-top: 40px;
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #00ffcc;
+      font-size: 18px;
+      border-radius: 10px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Footer Section */
+    footer {
+      margin-top: 50px;
+      padding: 10px;
+      background-color: #111;
+      color: #ccc;
+      font-size: 14px;
     }
 
     /* Animations */
     @keyframes glow {
-      0% {
-        text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 30px #00f0ff;
-      }
-      100% {
-        text-shadow: 0 0 20px #00f0ff, 0 0 30px #00f0ff, 0 0 40px #00f0ff;
-      }
+      0% { text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 15px #00ffcc; }
+      100% { text-shadow: 0 0 15px #00ffcc, 0 0 30px #00ffcc, 0 0 45px #00ffcc; }
     }
-
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
+    
     /* Responsive Design */
     @media (max-width: 768px) {
-      .title {
-        font-size: 36px;
-      }
-
-      .message {
-        font-size: 16px;
-      }
-
-      .loader {
-        width: 40px;
-        height: 40px;
-      }
-
-      .countdown .time {
-        font-size: 20px;
+      .button {
+        padding: 10px 20px;
+        font-size: 14px;
       }
     }
   </style>
 </head>
 <body>
-<script type="text/javascript">
+
+  <!-- Title Section -->
+  <h1>NABESOF</h1>
+
+  <!-- Adsterra Banner Placeholder -->
+  <div class="ad-banner">
+    <script type="text/javascript">
 	atOptions = {
 		'key' : 'c98e1e39ca255f2383a9f60f6a5d64d1',
 		'format' : 'iframe',
@@ -136,53 +120,26 @@
 	};
 </script>
 <script type="text/javascript" src="//forwardfishermanbidding.com/c98e1e39ca255f2383a9f60f6a5d64d1/invoke.js"></script>
-  <div class="container">
-    <h1 class="title">NABESOF</h1>
-    <p class="message">Our website is currently undergoing improvements. Please check back later.</p>
-    <div class="loader"></div>
-    <p class="note">Thank you for your patience!</p>
-    <div class="countdown">
-      <span class="time" id="countdown"></span>
-    </div>
+    <p>Your Adsterra Banner Ad Will Be Displayed Here</p>
   </div>
 
-  <div class="whatsapp">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
-    <span>+92 3707619619</span>
+  <!-- Buttons Section -->
+  <div class="button-container">
+    <a href="https://example.com/main-channels" class="button">Main Channels</a>
+    <a href="https://example.com/all-channels" class="button">All Channels</a>
   </div>
 
-  <script>
-    // Countdown Timer
-    let countdownElement = document.getElementById("countdown");
+  <!-- Promotional Banner -->
+  <div class="promo-banner">
+    <h3>Promotion Channels</h3>
+    <p>IF YOU WANT TO PROMOTE YOUR CHANNEL CONTACT AT
+                03707619619.</p>
+  </div>
 
-    function updateCountdown() {
-      let endDate = new Date("2025-01-15T00:00:00"); // Set your desired date here
-      let currentDate = new Date();
-      let timeRemaining = endDate - currentDate;
+  <!-- Footer Section -->
+  <footer>
+    Created By Hussain Nawaz
+  </footer>
 
-      if (timeRemaining > 0) {
-        let days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-        let hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        let minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-        let seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
-        countdownElement.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-      } else {
-        countdownElement.textContent = "The site is live!";
-      }
-    }
-
-    setInterval(updateCountdown, 500);
-  </script>
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'c98e1e39ca255f2383a9f60f6a5d64d1',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//forwardfishermanbidding.com/c98e1e39ca255f2383a9f60f6a5d64d1/invoke.js"></script>
 </body>
 </html>
